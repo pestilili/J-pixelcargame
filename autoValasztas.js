@@ -22,7 +22,7 @@ function valaszt(element){
         auto4.style.visibility = "hidden";
         balnyil.style.pointerEvents = "none";
         localStorage.setItem("auto", "supra");
-        window.alert(localStorage.getItem("auto"));
+       
         
     }
     else{
@@ -34,7 +34,6 @@ function valaszt(element){
         auto3.style.visibility = "hidden";                
         auto4.style.visibility = "hidden";
         localStorage.setItem("auto", "nissan");
-        window.alert(localStorage.getItem("auto"));
     }
     if (jobb == 2){
         auto1.style.visibility = "hidden";
@@ -42,7 +41,6 @@ function valaszt(element){
         auto3.style.visibility = "visible";                
         auto4.style.visibility = "hidden";
         localStorage.setItem("auto", "szisajargany");
-        window.alert(localStorage.getItem("auto"));
     }
     if (jobb == 3){
         auto1.style.visibility = "hidden";
@@ -51,7 +49,6 @@ function valaszt(element){
         auto4.style.visibility = "visible";
         jobbNyil.style.pointerEvents = "none";
         localStorage.setItem("auto", "miata");
-        window.alert(localStorage.getItem("auto"));
     }
     else{
         jobbNyil.style.pointerEvents = "auto";

@@ -247,13 +247,71 @@ body{
     grid-template-areas: 
         "map1 map2 map3 map4"
         "map5 map6 map7 map8";
-    row-gap: 20%;
-    column-gap: 4%;
+    row-gap: 10%;
+    column-gap: 5%;
 }
 
-#choose_map div{
-    background-color: purple;
+.choose_map div{
     border-radius: 8px;
-    grid-area: auto;
+    margin: 5px;
+}
+
+#map1{
+    grid-area: map1;
+    background-image: url(map1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#map2{
+    grid-area: map2;
+    background-image: url(map2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#map3{
+    grid-area: map3;
+}
+
+#map4{
+    grid-area: map4;
+}
+
+#map5{
+    grid-area: map5;
+}
+
+#map6{
+    grid-area: map6;
+}
+
+#map7{
+    grid-area: map7;
+}
+
+#map8{
+    grid-area: map8;
+}
+
+
+
+
+
+.choose_map div:not(#map1, #map2){
+    background-color: purple;
+}
+
+.choose_map div img:not(#map1 img, #map2 img){
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+
+#colors img{
+    width: 80%;
+    height:  80%;
+    margin: auto;
 }
 

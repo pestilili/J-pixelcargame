@@ -45,9 +45,12 @@ if(localStorage.getItem("szin") == "red" && localStorage.getItem("auto") == "szi
 let AutoHely = 0;
 let oldal = 0;
 
-setInterval(() => {
-    szoveg.style.visibility = "hidden";
+let pont = 0;
 
+
+let fa = setInterval(() => {
+    szoveg.style.visibility = "hidden";
+    
     oldal = Math.floor(Math.random() * 2);
     if (oldal == 0){
         money.style.transform = "translateX(0vh)";
@@ -56,17 +59,29 @@ setInterval(() => {
         money.style.transform = "translateX(50vh)";
     } 
     money.style.visibility = "visible";
-    
-    
-}, 5000);
+}, 3000);
 
-setInterval(() => {
-   if (oldal == AutoHely) {
+
+let t = 0;
+let id = setInterval(() => {
+   if (oldal == AutoHely && t % 10 == 0) {
         szoveg.style.visibility = "visible";
+        pont += 5;
         oldal = -1;
+       
         money.style.visibility = "hidden";
-    } 
+    }
     
+    if(pont == 25){
+
+        document.getElementsByTagName("body")[0].innerHTML += "<div id=\"nyeremeny\">Elért pontjaid: " +pont+ "</div>";
+
+        clearInterval(fa);
+        clearInterval(id);
+        pont = 0;
+    
+    }
+    t++;
 }, 100);
 
 document.addEventListener("keydown", function (event) {
@@ -84,3 +99,5 @@ document.addEventListener("keydown", function (event) {
         }
     }        
 })
+
+

@@ -28,3 +28,16 @@ body{
 #nyertel{
     visibility: hidden;
 }
+
+#nyeremeny{
+    background-color: rgb(38, 54, 54);
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+    transform: translate(0px, -90vh);
+    border-radius: 10px;
+    text-align: center;
+    font-size: larger;
+    padding-top: 15%;
+    color: white;
+}
